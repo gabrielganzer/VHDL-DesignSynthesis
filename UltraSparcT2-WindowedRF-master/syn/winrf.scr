@@ -1,0 +1,40 @@
+########################################################################################################################
+#					  Windowed Register File Synthesis Script
+########################################################################################################################
+
+# Analyze and elaborate
+analyze -library WORK -format vhdl {functions.vhd}
+analyze -library WORK -format vhdl {constants.vhd}
+analyze -library WORK -format vhdl {winrf.vhd}
+elaborate WINDOWED_REGISTER_FILE -architecture BEHAVIORAL -library DEFAULT -parameters "NBIT = 64, M = 5, N = 3, F = 2"
+##########################################
+# First compilation, without constraints
+compile
+# Timing and area reports after the first synthesis without constraints
+report_timing > timing.txt
+report_area > area.txt
+# Saving unconstrained netlists
+write -hierarchy -format ddc -output WRF.ddc
+write -hierarchy -format vhdl -output WRF.vhdl
+write -hierarchy -format verilog -output WRF.v
+
+# THE FOLLOWING SYNTHESIS PROCEDURES WERE NOT REQUIRED, NEVERTHELESS THEY WERE PERFORMED FOR PRACTICE MATTERS
+# Defining the clock signal with a 2 time units period
+#create_clock -name "CLK" -period 2 CLK
+# Second compilation, with a timing constraint on registers' path
+#compile
+# Timing and area reports after the second synthesis with additional clock constraint
+#report_timing > CLK_timing.txt
+#report_area > CLK_area.txt
+# Set previous clock constraint to all inputs
+#set_max_delay 2 -from [all_inputs] -to [all_outputs]
+# Third compilation, now with that timing constraint forced to all paths
+#compile
+# Timing and area reports after the third synthesis with all paths constrained
+#report_timing > OPT_timing.txt
+#report_area > OPT_area.txt
+# Saving optimized netlists
+#write -hierarchy -format ddc -output WRF_optmized.ddc
+#write -hierarchy -format vhdl -output WRF_optmized.vhdl
+#write -hierarchy -format verilog -output WRF_optmized.v
+

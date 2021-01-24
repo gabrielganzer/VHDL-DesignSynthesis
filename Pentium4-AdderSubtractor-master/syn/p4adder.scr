@@ -1,0 +1,7 @@
+analyze -library WORK -format vhdl {constants.vhd functions.vhd blockG.vhd blockPG.vhd PGnetwork.vhd sparsetree.vhd mux21.vhd fa.vhd rca.vhd csb.vhd sumgen.vhd P4adder.vhd}
+elaborate P4ADDER -architecture STRUCTURAL -library WORK -parameters "NBIT = 32"
+compile -exact_map
+report_power > p4adder_timeopt_pw.rpt
+report_timing > p4adder_timeopt_t.rpt
+write -hierarchy -f verilog -output p4adder.v
+write_sdc P4ADDER.sdc

@@ -1,0 +1,7 @@
+analyze -library WORK -format vhdl {constants.vhd fa.vhd rca.vhd encoder.vhd multiplier.vhd}
+elaborate BOOTHMUL -architecture STRUCTURAL -library WORK
+compile -exact_map
+report_power > mul_timeopt_pw.rpt
+report_timing > mul_timeopt_t.rpt
+write -hierarchy -f verilog -output mul.v
+write_sdc MUL.sdc

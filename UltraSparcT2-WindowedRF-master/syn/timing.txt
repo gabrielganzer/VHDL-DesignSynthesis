@@ -1,0 +1,40 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'WINDOWED_REGISTER_FILE_NBIT64_M5_N3_F2' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : WINDOWED_REGISTER_FILE_NBIT64_M5_N3_F2
+Version: F-2011.09-SP3
+Date   : Tue Jun  9 22:44:48 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: SPILLING_reg
+              (rising edge-triggered flip-flop)
+  Endpoint: SPILL (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  WINDOWED_REGISTER_FILE_NBIT64_M5_N3_F2
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  SPILLING_reg/CK (DFF_X1)                 0.00 #     0.00 r
+  SPILLING_reg/Q (DFF_X1)                  0.10       0.10 r
+  SPILL (out)                              0.00       0.10 r
+  data arrival time                                   0.10
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

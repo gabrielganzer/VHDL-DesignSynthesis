@@ -1,0 +1,56 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'REGISTER_FILE_NBIT64_NREG32_NADDR5' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : REGISTER_FILE_NBIT64_NREG32_NADDR5
+Version: F-2011.09-SP3
+Date   : Tue Jun  9 22:42:52 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: REGISTERS_reg[22][0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: OUT1_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  REGISTER_FILE_NBIT64_NREG32_NADDR5
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  REGISTERS_reg[22][0]/CK (DFF_X1)         0.00 #     0.00 r
+  REGISTERS_reg[22][0]/Q (DFF_X1)          0.08       0.08 f
+  U13850/ZN (AOI222_X1)                    0.11       0.19 r
+  U13849/ZN (OAI221_X1)                    0.06       0.24 f
+  U16482/ZN (NOR4_X1)                      0.07       0.31 r
+  U16480/ZN (NAND2_X1)                     0.03       0.34 f
+  OUT1_reg[0]/D (DFF_X1)                   0.01       0.35 f
+  data arrival time                                   0.35
+
+  clock CLK (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  OUT1_reg[0]/CK (DFF_X1)                  0.00       2.00 r
+  library setup time                      -0.04       1.96
+  data required time                                  1.96
+  -----------------------------------------------------------
+  data required time                                  1.96
+  data arrival time                                  -0.35
+  -----------------------------------------------------------
+  slack (MET)                                         1.61
+
+
+1

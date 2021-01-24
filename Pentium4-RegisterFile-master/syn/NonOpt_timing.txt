@@ -1,0 +1,40 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'REGISTER_FILE_NBIT64_NREG32_NADDR5' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : REGISTER_FILE_NBIT64_NREG32_NADDR5
+Version: F-2011.09-SP3
+Date   : Tue Jun  9 22:42:14 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: OUT1_reg[63]
+              (rising edge-triggered flip-flop)
+  Endpoint: OUT1[63] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  REGISTER_FILE_NBIT64_NREG32_NADDR5
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  OUT1_reg[63]/CK (DFF_X1)                 0.00 #     0.00 r
+  OUT1_reg[63]/Q (DFF_X1)                  0.09       0.09 r
+  OUT1[63] (out)                           0.00       0.09 r
+  data arrival time                                   0.09
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

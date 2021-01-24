@@ -1,0 +1,28 @@
+ 
+****************************************
+Report : area
+Design : REGISTER_FILE_NBIT64_NREG32_NADDR5
+Version: F-2011.09-SP3
+Date   : Tue Jun  9 22:42:52 2020
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                          213
+Number of nets:                          9115
+Number of cells:                         8006
+Number of combinational cells:           5830
+Number of sequential cells:              2176
+Number of macros:                           0
+Number of buf/inv:                       1129
+Number of references:                      18
+
+Combinational area:       7443.744074
+Noncombinational area:    9839.871643
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          17283.615717
+Total area:                 undefined
+1

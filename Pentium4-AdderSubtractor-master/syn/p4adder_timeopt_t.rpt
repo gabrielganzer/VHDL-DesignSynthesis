@@ -1,0 +1,35 @@
+Warning: Design 'P4ADDER_NBIT32' has '44' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : P4ADDER_NBIT32
+Version: F-2011.09-SP3
+Date   : Tue Jun  9 22:50:15 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: SUMGEN0/GENi_7/S[3] (internal pin)
+  Endpoint: S[31] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4ADDER_NBIT32     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  SUMGEN0/GENi_7/S[3] (CSB_RADIX4_0)                      0.00       0.00 r
+  SUMGEN0/S[31] (SUMGEN_NBIT32_RADIX4)                    0.00       0.00 r
+  S[31] (out)                                             0.00       0.00 r
+  data arrival time                                                  0.00
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
