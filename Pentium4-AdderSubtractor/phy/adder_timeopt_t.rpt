@@ -1,0 +1,87 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : ADDER
+Version: F-2011.09-SP3
+Date   : Tue Jun  9 14:32:11 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: regA/Q_reg[3]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: regS/Q_reg[20]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ADDER              5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regA/Q_reg[3]/CK (DFFR_X1)                              0.00       0.00 r
+  regA/Q_reg[3]/Q (DFFR_X1)                               0.13       0.13 r
+  regA/Q[3] (GEN_REG_N32_0)                               0.00       0.13 r
+  adder/A[3] (P4ADDER_NBIT32)                             0.00       0.13 r
+  adder/SPARSETREE0/A[3] (SPARSETREE_NBIT32_RADIX4)       0.00       0.13 r
+  adder/SPARSETREE0/PGNETWORK/A[3] (PGNET_NBIT32)         0.00       0.13 r
+  adder/SPARSETREE0/PGNETWORK/U39/Z (XOR2_X1)             0.09       0.22 r
+  adder/SPARSETREE0/PGNETWORK/P[3] (PGNET_NBIT32)         0.00       0.22 r
+  adder/SPARSETREE0/m_PG1_1_3/pik (BLOCKPG_0)             0.00       0.22 r
+  adder/SPARSETREE0/m_PG1_1_3/U3/ZN (AOI21_X1)            0.04       0.26 f
+  adder/SPARSETREE0/m_PG1_1_3/U2/ZN (INV_X1)              0.03       0.29 r
+  adder/SPARSETREE0/m_PG1_1_3/gij (BLOCKPG_0)             0.00       0.29 r
+  adder/SPARSETREE0/n_G1_2_3/gik (BLOCKG_8)               0.00       0.29 r
+  adder/SPARSETREE0/n_G1_2_3/U2/ZN (AOI21_X1)             0.03       0.31 f
+  adder/SPARSETREE0/n_G1_2_3/U1/ZN (INV_X1)               0.05       0.37 r
+  adder/SPARSETREE0/n_G1_2_3/gij (BLOCKG_8)               0.00       0.37 r
+  adder/SPARSETREE0/n_G2_3_7/gk_1j (BLOCKG_7)             0.00       0.37 r
+  adder/SPARSETREE0/n_G2_3_7/U2/ZN (AOI21_X1)             0.04       0.41 f
+  adder/SPARSETREE0/n_G2_3_7/U1/ZN (INV_X1)               0.06       0.47 r
+  adder/SPARSETREE0/n_G2_3_7/gij (BLOCKG_7)               0.00       0.47 r
+  adder/SPARSETREE0/n_G2_4_15/gk_1j (BLOCKG_5)            0.00       0.47 r
+  adder/SPARSETREE0/n_G2_4_15/U2/ZN (AOI21_X1)            0.05       0.52 f
+  adder/SPARSETREE0/n_G2_4_15/U1/ZN (INV_X1)              0.08       0.60 r
+  adder/SPARSETREE0/n_G2_4_15/gij (BLOCKG_5)              0.00       0.60 r
+  adder/SPARSETREE0/n_G2_5_19/gk_1j (BLOCKG_4)            0.00       0.60 r
+  adder/SPARSETREE0/n_G2_5_19/U2/ZN (AOI21_X1)            0.06       0.65 f
+  adder/SPARSETREE0/n_G2_5_19/U1/ZN (INV_X1)              0.05       0.70 r
+  adder/SPARSETREE0/n_G2_5_19/gij (BLOCKG_4)              0.00       0.70 r
+  adder/SPARSETREE0/Co[4] (SPARSETREE_NBIT32_RADIX4)      0.00       0.70 r
+  adder/SUMGEN0/Ci[5] (SUMGEN_NBIT32_RADIX4)              0.00       0.70 r
+  adder/SUMGEN0/GENi_5/Ci (CSB_RADIX4_6)                  0.00       0.70 r
+  adder/SUMGEN0/GENi_5/MUX21_SUM/SEL (MUX21_GENERIC_NBIT4_6)
+                                                          0.00       0.70 r
+  adder/SUMGEN0/GENi_5/MUX21_SUM/U1/ZN (INV_X1)           0.04       0.75 f
+  adder/SUMGEN0/GENi_5/MUX21_SUM/U9/ZN (AOI22_X1)         0.06       0.81 r
+  adder/SUMGEN0/GENi_5/MUX21_SUM/U8/ZN (INV_X1)           0.02       0.83 f
+  adder/SUMGEN0/GENi_5/MUX21_SUM/Y[0] (MUX21_GENERIC_NBIT4_6)
+                                                          0.00       0.83 f
+  adder/SUMGEN0/GENi_5/S[0] (CSB_RADIX4_6)                0.00       0.83 f
+  adder/SUMGEN0/S[20] (SUMGEN_NBIT32_RADIX4)              0.00       0.83 f
+  adder/S[20] (P4ADDER_NBIT32)                            0.00       0.83 f
+  regS/D[20] (GEN_REG_N32_1)                              0.00       0.83 f
+  regS/Q_reg[20]/D (DFFR_X1)                              0.01       0.84 f
+  data arrival time                                                  0.84
+
+  clock CLK (rise edge)                                   5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  regS/Q_reg[20]/CK (DFFR_X1)                             0.00       5.00 r
+  library setup time                                     -0.04       4.96
+  data required time                                                 4.96
+  --------------------------------------------------------------------------
+  data required time                                                 4.96
+  data arrival time                                                 -0.84
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.12
+
+
+1

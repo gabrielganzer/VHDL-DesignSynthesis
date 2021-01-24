@@ -1,0 +1,8 @@
+Gate area 0.7980 um^2
+Level 0 Module ADDER                                    Gates=      1427 Cells=     664 Area=    1139.3 um^2
+Level 1 Module regA                                     Gates=237        Cells=56       Area=     189.4 um^2
+Level 1 Module regB                                     Gates=234        Cells=53       Area=     187.0 um^2
+Level 1 Module regS                                     Gates=213        Cells=32       Area=     170.2 um^2
+Level 1 Module adder                                    Gates=696        Cells=489      Area=     555.9 um^2
+Level 2 Module adder/SPARSETREE0                        Gates=211        Cells=161      Area=     168.6 um^2
+Level 2 Module adder/SUMGEN0                            Gates=485        Cells=328      Area=     387.3 um^2

@@ -1,0 +1,13 @@
+analyze -library WORK -format vhdl {constants.vhd functions.vhd blockG.vhd blockPG.vhd PGnetwork.vhd sparsetree.vhd mux21.vhd fa.vhd rca.vhd csb.vhd sumgen.vhd P4adder.vhd ff.vhd reg.vhd adder.vhd}
+elaborate ADDER -architecture STRUCTURAL -library WORK
+set_wire_load_model -name 5K_hvratio_1_4
+#Forces a clock of period Period connected to the input port CLK #
+create_clock -name "CLK" -period 5 {"CLK"}
+#forces a combinational max delay of 5 ns from each of the inputs
+#to each of th output in case combinational paths are present 
+set_max_delay 5 -from [all_inputs] -to [all_outputs]
+compile -map_effort high
+report_power > adder_timeopt_pw.rpt
+report_timing > adder_timeopt_t.rpt
+write -hierarchy -f verilog -output adder.v
+write_sdc ADDER.sdc

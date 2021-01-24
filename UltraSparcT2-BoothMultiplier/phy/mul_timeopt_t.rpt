@@ -1,0 +1,393 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MUL
+Version: F-2011.09-SP3
+Date   : Tue Jun  9 16:08:25 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: regB/Q_reg[0]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: regP/Q_reg[62]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  MUL                5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regB/Q_reg[0]/CK (DFFR_X1)                              0.00       0.00 r
+  regB/Q_reg[0]/QN (DFFR_X1)                              0.07       0.07 f
+  regB/U4/ZN (INV_X1)                                     0.04       0.11 r
+  regB/Q[0] (GEN_REG_N32_1)                               0.00       0.11 r
+  mul/B[0] (BOOTHMUL_NBIT32)                              0.00       0.11 r
+  mul/enc0/b[1] (ENC_NBIT32_0)                            0.00       0.11 r
+  mul/enc0/U32/ZN (XNOR2_X1)                              0.06       0.17 r
+  mul/enc0/U29/ZN (NAND2_X1)                              0.03       0.20 f
+  mul/enc0/U23/ZN (AND2_X1)                               0.04       0.24 f
+  mul/enc0/U22/ZN (AOI22_X1)                              0.06       0.30 r
+  mul/enc0/U10/ZN (NAND3_X1)                              0.04       0.35 f
+  mul/enc0/vp[3] (ENC_NBIT32_0)                           0.00       0.35 f
+  mul/adder0/B[3] (RCA_NBIT32_0)                          0.00       0.35 f
+  mul/adder0/sumI_3/B (FA_525)                            0.00       0.35 f
+  mul/adder0/sumI_3/U6/ZN (XNOR2_X1)                      0.07       0.41 f
+  mul/adder0/sumI_3/U3/ZN (XNOR2_X1)                      0.06       0.48 f
+  mul/adder0/sumI_3/S (FA_525)                            0.00       0.48 f
+  mul/adder0/S[1] (RCA_NBIT32_0)                          0.00       0.48 f
+  mul/adders_0/A[1] (RCA_NBIT32_15)                       0.00       0.48 f
+  mul/adders_0/sumI_1/A (FA_494)                          0.00       0.48 f
+  mul/adders_0/sumI_1/U4/Z (XOR2_X1)                      0.06       0.53 r
+  mul/adders_0/sumI_1/U2/ZN (NAND2_X1)                    0.03       0.57 f
+  mul/adders_0/sumI_1/U5/ZN (NAND2_X1)                    0.03       0.60 r
+  mul/adders_0/sumI_1/Co (FA_494)                         0.00       0.60 r
+  mul/adders_0/sumI_2/Ci (FA_493)                         0.00       0.60 r
+  mul/adders_0/sumI_2/U2/Z (BUF_X1)                       0.04       0.64 r
+  mul/adders_0/sumI_2/U3/Z (XOR2_X1)                      0.08       0.72 r
+  mul/adders_0/sumI_2/S (FA_493)                          0.00       0.72 r
+  mul/adders_0/S[0] (RCA_NBIT32_15)                       0.00       0.72 r
+  mul/adders_1/A[0] (RCA_NBIT32_14)                       0.00       0.72 r
+  mul/adders_1/sum0/A (FA_462)                            0.00       0.72 r
+  mul/adders_1/sum0/U2/ZN (AOI22_X1)                      0.04       0.76 f
+  mul/adders_1/sum0/U1/ZN (INV_X1)                        0.03       0.79 r
+  mul/adders_1/sum0/Co (FA_462)                           0.00       0.79 r
+  mul/adders_1/sumI_1/Ci (FA_461)                         0.00       0.79 r
+  mul/adders_1/sumI_1/U3/ZN (INV_X1)                      0.02       0.81 f
+  mul/adders_1/sumI_1/U8/ZN (AND2_X1)                     0.04       0.85 f
+  mul/adders_1/sumI_1/U2/ZN (AOI21_X1)                    0.06       0.91 r
+  mul/adders_1/sumI_1/Co (FA_461)                         0.00       0.91 r
+  mul/adders_1/sumI_2/Ci (FA_460)                         0.00       0.91 r
+  mul/adders_1/sumI_2/U6/ZN (NAND2_X1)                    0.03       0.94 f
+  mul/adders_1/sumI_2/U7/ZN (NAND2_X1)                    0.04       0.98 r
+  mul/adders_1/sumI_2/Co (FA_460)                         0.00       0.98 r
+  mul/adders_1/sumI_3/Ci (FA_459)                         0.00       0.98 r
+  mul/adders_1/sumI_3/U1/ZN (AOI22_X1)                    0.04       1.02 f
+  mul/adders_1/sumI_3/U2/ZN (INV_X1)                      0.04       1.06 r
+  mul/adders_1/sumI_3/Co (FA_459)                         0.00       1.06 r
+  mul/adders_1/sumI_4/Ci (FA_458)                         0.00       1.06 r
+  mul/adders_1/sumI_4/U1/ZN (AOI22_X1)                    0.04       1.09 f
+  mul/adders_1/sumI_4/U2/ZN (INV_X1)                      0.04       1.14 r
+  mul/adders_1/sumI_4/Co (FA_458)                         0.00       1.14 r
+  mul/adders_1/sumI_5/Ci (FA_457)                         0.00       1.14 r
+  mul/adders_1/sumI_5/U3/ZN (INV_X1)                      0.03       1.16 f
+  mul/adders_1/sumI_5/U5/ZN (OAI22_X1)                    0.05       1.21 r
+  mul/adders_1/sumI_5/Co (FA_457)                         0.00       1.21 r
+  mul/adders_1/sumI_6/Ci (FA_456)                         0.00       1.21 r
+  mul/adders_1/sumI_6/U6/ZN (INV_X1)                      0.03       1.24 f
+  mul/adders_1/sumI_6/U2/ZN (OAI22_X1)                    0.06       1.30 r
+  mul/adders_1/sumI_6/Co (FA_456)                         0.00       1.30 r
+  mul/adders_1/sumI_7/Ci (FA_455)                         0.00       1.30 r
+  mul/adders_1/sumI_7/U5/ZN (INV_X1)                      0.03       1.32 f
+  mul/adders_1/sumI_7/U3/ZN (OAI22_X1)                    0.05       1.38 r
+  mul/adders_1/sumI_7/Co (FA_455)                         0.00       1.38 r
+  mul/adders_1/sumI_8/Ci (FA_454)                         0.00       1.38 r
+  mul/adders_1/sumI_8/U3/Z (BUF_X1)                       0.04       1.42 r
+  mul/adders_1/sumI_8/U2/ZN (XNOR2_X1)                    0.07       1.49 r
+  mul/adders_1/sumI_8/S (FA_454)                          0.00       1.49 r
+  mul/adders_1/S[6] (RCA_NBIT32_14)                       0.00       1.49 r
+  mul/adders_2/A[6] (RCA_NBIT32_13)                       0.00       1.49 r
+  mul/adders_2/sumI_6/A (FA_423)                          0.00       1.49 r
+  mul/adders_2/sumI_6/U6/ZN (XNOR2_X1)                    0.07       1.56 r
+  mul/adders_2/sumI_6/U4/ZN (OAI22_X1)                    0.04       1.60 f
+  mul/adders_2/sumI_6/Co (FA_423)                         0.00       1.60 f
+  mul/adders_2/sumI_7/Ci (FA_422)                         0.00       1.60 f
+  mul/adders_2/sumI_7/U5/ZN (INV_X1)                      0.04       1.64 r
+  mul/adders_2/sumI_7/U6/Z (XOR2_X1)                      0.08       1.71 r
+  mul/adders_2/sumI_7/S (FA_422)                          0.00       1.71 r
+  mul/adders_2/S[5] (RCA_NBIT32_13)                       0.00       1.71 r
+  mul/adders_3/A[5] (RCA_NBIT32_12)                       0.00       1.71 r
+  mul/adders_3/sumI_5/A (FA_391)                          0.00       1.71 r
+  mul/adders_3/sumI_5/U4/Z (CLKBUF_X1)                    0.05       1.76 r
+  mul/adders_3/sumI_5/U3/ZN (INV_X1)                      0.02       1.79 f
+  mul/adders_3/sumI_5/U1/ZN (OAI22_X1)                    0.06       1.85 r
+  mul/adders_3/sumI_5/Co (FA_391)                         0.00       1.85 r
+  mul/adders_3/sumI_6/Ci (FA_390)                         0.00       1.85 r
+  mul/adders_3/sumI_6/U4/ZN (INV_X1)                      0.03       1.87 f
+  mul/adders_3/sumI_6/U1/ZN (OAI22_X1)                    0.05       1.92 r
+  mul/adders_3/sumI_6/Co (FA_390)                         0.00       1.92 r
+  mul/adders_3/sumI_7/Ci (FA_389)                         0.00       1.92 r
+  mul/adders_3/sumI_7/U5/ZN (INV_X1)                      0.03       1.95 f
+  mul/adders_3/sumI_7/U2/ZN (OAI22_X1)                    0.04       2.00 r
+  mul/adders_3/sumI_7/Co (FA_389)                         0.00       2.00 r
+  mul/adders_3/sumI_8/Ci (FA_388)                         0.00       2.00 r
+  mul/adders_3/sumI_8/U5/ZN (INV_X1)                      0.03       2.03 f
+  mul/adders_3/sumI_8/U2/ZN (OAI22_X1)                    0.05       2.07 r
+  mul/adders_3/sumI_8/Co (FA_388)                         0.00       2.07 r
+  mul/adders_3/sumI_9/Ci (FA_387)                         0.00       2.07 r
+  mul/adders_3/sumI_9/U5/ZN (INV_X1)                      0.03       2.11 f
+  mul/adders_3/sumI_9/U2/ZN (OAI22_X1)                    0.05       2.16 r
+  mul/adders_3/sumI_9/Co (FA_387)                         0.00       2.16 r
+  mul/adders_3/sumI_10/Ci (FA_386)                        0.00       2.16 r
+  mul/adders_3/sumI_10/U4/ZN (INV_X1)                     0.03       2.19 f
+  mul/adders_3/sumI_10/U1/ZN (OAI22_X1)                   0.04       2.23 r
+  mul/adders_3/sumI_10/Co (FA_386)                        0.00       2.23 r
+  mul/adders_3/sumI_11/Ci (FA_385)                        0.00       2.23 r
+  mul/adders_3/sumI_11/U5/ZN (INV_X1)                     0.03       2.26 f
+  mul/adders_3/sumI_11/U2/ZN (OAI22_X1)                   0.06       2.32 r
+  mul/adders_3/sumI_11/Co (FA_385)                        0.00       2.32 r
+  mul/adders_3/sumI_12/Ci (FA_384)                        0.00       2.32 r
+  mul/adders_3/sumI_12/U4/ZN (INV_X1)                     0.03       2.35 f
+  mul/adders_3/sumI_12/U1/ZN (OAI22_X1)                   0.04       2.39 r
+  mul/adders_3/sumI_12/Co (FA_384)                        0.00       2.39 r
+  mul/adders_3/sumI_13/Ci (FA_383)                        0.00       2.39 r
+  mul/adders_3/sumI_13/U4/ZN (INV_X1)                     0.03       2.43 f
+  mul/adders_3/sumI_13/U1/ZN (OAI22_X1)                   0.05       2.48 r
+  mul/adders_3/sumI_13/Co (FA_383)                        0.00       2.48 r
+  mul/adders_3/sumI_14/Ci (FA_382)                        0.00       2.48 r
+  mul/adders_3/sumI_14/U4/ZN (INV_X1)                     0.03       2.51 f
+  mul/adders_3/sumI_14/U1/ZN (OAI22_X1)                   0.04       2.55 r
+  mul/adders_3/sumI_14/Co (FA_382)                        0.00       2.55 r
+  mul/adders_3/sumI_15/Ci (FA_381)                        0.00       2.55 r
+  mul/adders_3/sumI_15/U4/ZN (INV_X1)                     0.03       2.58 f
+  mul/adders_3/sumI_15/U1/ZN (OAI22_X1)                   0.05       2.64 r
+  mul/adders_3/sumI_15/Co (FA_381)                        0.00       2.64 r
+  mul/adders_3/sumI_16/Ci (FA_380)                        0.00       2.64 r
+  mul/adders_3/sumI_16/U5/ZN (INV_X1)                     0.03       2.67 f
+  mul/adders_3/sumI_16/U4/ZN (OAI22_X1)                   0.05       2.72 r
+  mul/adders_3/sumI_16/Co (FA_380)                        0.00       2.72 r
+  mul/adders_3/sumI_17/Ci (FA_379)                        0.00       2.72 r
+  mul/adders_3/sumI_17/U5/ZN (INV_X1)                     0.03       2.74 f
+  mul/adders_3/sumI_17/U2/ZN (OAI22_X1)                   0.04       2.79 r
+  mul/adders_3/sumI_17/Co (FA_379)                        0.00       2.79 r
+  mul/adders_3/sumI_18/Ci (FA_378)                        0.00       2.79 r
+  mul/adders_3/sumI_18/U5/ZN (INV_X1)                     0.03       2.82 f
+  mul/adders_3/sumI_18/U2/ZN (OAI22_X1)                   0.05       2.87 r
+  mul/adders_3/sumI_18/Co (FA_378)                        0.00       2.87 r
+  mul/adders_3/sumI_19/Ci (FA_377)                        0.00       2.87 r
+  mul/adders_3/sumI_19/U4/ZN (INV_X1)                     0.03       2.90 f
+  mul/adders_3/sumI_19/U1/ZN (OAI22_X1)                   0.05       2.95 r
+  mul/adders_3/sumI_19/Co (FA_377)                        0.00       2.95 r
+  mul/adders_3/sumI_20/Ci (FA_376)                        0.00       2.95 r
+  mul/adders_3/sumI_20/U2/Z (BUF_X1)                      0.04       3.00 r
+  mul/adders_3/sumI_20/U1/ZN (XNOR2_X1)                   0.06       3.06 r
+  mul/adders_3/sumI_20/S (FA_376)                         0.00       3.06 r
+  mul/adders_3/S[18] (RCA_NBIT32_12)                      0.00       3.06 r
+  mul/adders_4/A[18] (RCA_NBIT32_11)                      0.00       3.06 r
+  mul/adders_4/sumI_18/A (FA_345)                         0.00       3.06 r
+  mul/adders_4/sumI_18/U1/ZN (XNOR2_X1)                   0.07       3.13 r
+  mul/adders_4/sumI_18/U2/Z (XOR2_X1)                     0.09       3.22 r
+  mul/adders_4/sumI_18/S (FA_345)                         0.00       3.22 r
+  mul/adders_4/S[16] (RCA_NBIT32_11)                      0.00       3.22 r
+  mul/adders_5/A[16] (RCA_NBIT32_10)                      0.00       3.22 r
+  mul/adders_5/sumI_16/A (FA_314)                         0.00       3.22 r
+  mul/adders_5/sumI_16/U1/ZN (XNOR2_X1)                   0.07       3.29 r
+  mul/adders_5/sumI_16/U2/Z (XOR2_X1)                     0.09       3.38 r
+  mul/adders_5/sumI_16/S (FA_314)                         0.00       3.38 r
+  mul/adders_5/S[14] (RCA_NBIT32_10)                      0.00       3.38 r
+  mul/adders_6/A[14] (RCA_NBIT32_9)                       0.00       3.38 r
+  mul/adders_6/sumI_14/A (FA_283)                         0.00       3.38 r
+  mul/adders_6/sumI_14/U1/ZN (XNOR2_X1)                   0.07       3.46 r
+  mul/adders_6/sumI_14/U2/ZN (OAI22_X1)                   0.05       3.50 f
+  mul/adders_6/sumI_14/Co (FA_283)                        0.00       3.50 f
+  mul/adders_6/sumI_15/Ci (FA_282)                        0.00       3.50 f
+  mul/adders_6/sumI_15/U7/Z (BUF_X1)                      0.04       3.55 f
+  mul/adders_6/sumI_15/U8/ZN (XNOR2_X1)                   0.06       3.61 f
+  mul/adders_6/sumI_15/S (FA_282)                         0.00       3.61 f
+  mul/adders_6/S[13] (RCA_NBIT32_9)                       0.00       3.61 f
+  mul/adders_7/A[13] (RCA_NBIT32_8)                       0.00       3.61 f
+  mul/adders_7/sumI_13/A (FA_251)                         0.00       3.61 f
+  mul/adders_7/sumI_13/U3/ZN (XNOR2_X1)                   0.07       3.67 f
+  mul/adders_7/sumI_13/U2/Z (XOR2_X1)                     0.09       3.76 f
+  mul/adders_7/sumI_13/S (FA_251)                         0.00       3.76 f
+  mul/adders_7/S[11] (RCA_NBIT32_8)                       0.00       3.76 f
+  mul/adders_8/A[11] (RCA_NBIT32_7)                       0.00       3.76 f
+  mul/adders_8/sumI_11/A (FA_220)                         0.00       3.76 f
+  mul/adders_8/sumI_11/U5/ZN (XNOR2_X1)                   0.07       3.83 f
+  mul/adders_8/sumI_11/U1/ZN (OAI22_X1)                   0.05       3.88 r
+  mul/adders_8/sumI_11/Co (FA_220)                        0.00       3.88 r
+  mul/adders_8/sumI_12/Ci (FA_219)                        0.00       3.88 r
+  mul/adders_8/sumI_12/U7/ZN (INV_X1)                     0.03       3.92 f
+  mul/adders_8/sumI_12/U4/ZN (OAI22_X1)                   0.05       3.97 r
+  mul/adders_8/sumI_12/Co (FA_219)                        0.00       3.97 r
+  mul/adders_8/sumI_13/Ci (FA_218)                        0.00       3.97 r
+  mul/adders_8/sumI_13/U6/ZN (INV_X1)                     0.03       4.00 f
+  mul/adders_8/sumI_13/U7/ZN (OAI22_X1)                   0.05       4.05 r
+  mul/adders_8/sumI_13/Co (FA_218)                        0.00       4.05 r
+  mul/adders_8/sumI_14/Ci (FA_217)                        0.00       4.05 r
+  mul/adders_8/sumI_14/U5/ZN (INV_X1)                     0.03       4.08 f
+  mul/adders_8/sumI_14/U4/ZN (OAI22_X1)                   0.05       4.13 r
+  mul/adders_8/sumI_14/Co (FA_217)                        0.00       4.13 r
+  mul/adders_8/sumI_15/Ci (FA_216)                        0.00       4.13 r
+  mul/adders_8/sumI_15/U4/ZN (INV_X1)                     0.03       4.16 f
+  mul/adders_8/sumI_15/U1/ZN (OAI22_X1)                   0.05       4.21 r
+  mul/adders_8/sumI_15/Co (FA_216)                        0.00       4.21 r
+  mul/adders_8/sumI_16/Ci (FA_215)                        0.00       4.21 r
+  mul/adders_8/sumI_16/U4/ZN (INV_X1)                     0.03       4.23 f
+  mul/adders_8/sumI_16/U1/ZN (OAI22_X1)                   0.05       4.29 r
+  mul/adders_8/sumI_16/Co (FA_215)                        0.00       4.29 r
+  mul/adders_8/sumI_17/Ci (FA_214)                        0.00       4.29 r
+  mul/adders_8/sumI_17/U4/ZN (INV_X1)                     0.03       4.31 f
+  mul/adders_8/sumI_17/U1/ZN (OAI22_X1)                   0.05       4.37 r
+  mul/adders_8/sumI_17/Co (FA_214)                        0.00       4.37 r
+  mul/adders_8/sumI_18/Ci (FA_213)                        0.00       4.37 r
+  mul/adders_8/sumI_18/U5/ZN (INV_X1)                     0.03       4.39 f
+  mul/adders_8/sumI_18/U4/ZN (OAI22_X1)                   0.05       4.44 r
+  mul/adders_8/sumI_18/Co (FA_213)                        0.00       4.44 r
+  mul/adders_8/sumI_19/Ci (FA_212)                        0.00       4.44 r
+  mul/adders_8/sumI_19/U5/ZN (INV_X1)                     0.03       4.47 f
+  mul/adders_8/sumI_19/U7/ZN (OAI22_X1)                   0.05       4.52 r
+  mul/adders_8/sumI_19/Co (FA_212)                        0.00       4.52 r
+  mul/adders_8/sumI_20/Ci (FA_211)                        0.00       4.52 r
+  mul/adders_8/sumI_20/U5/ZN (INV_X1)                     0.03       4.55 f
+  mul/adders_8/sumI_20/U7/ZN (OAI22_X1)                   0.05       4.60 r
+  mul/adders_8/sumI_20/Co (FA_211)                        0.00       4.60 r
+  mul/adders_8/sumI_21/Ci (FA_210)                        0.00       4.60 r
+  mul/adders_8/sumI_21/U5/ZN (INV_X1)                     0.03       4.63 f
+  mul/adders_8/sumI_21/U7/ZN (OAI22_X1)                   0.05       4.68 r
+  mul/adders_8/sumI_21/Co (FA_210)                        0.00       4.68 r
+  mul/adders_8/sumI_22/Ci (FA_209)                        0.00       4.68 r
+  mul/adders_8/sumI_22/U5/ZN (INV_X1)                     0.03       4.71 f
+  mul/adders_8/sumI_22/U7/ZN (OAI22_X1)                   0.05       4.76 r
+  mul/adders_8/sumI_22/Co (FA_209)                        0.00       4.76 r
+  mul/adders_8/sumI_23/Ci (FA_208)                        0.00       4.76 r
+  mul/adders_8/sumI_23/U5/ZN (INV_X1)                     0.03       4.79 f
+  mul/adders_8/sumI_23/U7/ZN (OAI22_X1)                   0.05       4.84 r
+  mul/adders_8/sumI_23/Co (FA_208)                        0.00       4.84 r
+  mul/adders_8/sumI_24/Ci (FA_207)                        0.00       4.84 r
+  mul/adders_8/sumI_24/U5/ZN (INV_X1)                     0.03       4.87 f
+  mul/adders_8/sumI_24/U7/ZN (OAI22_X1)                   0.05       4.92 r
+  mul/adders_8/sumI_24/Co (FA_207)                        0.00       4.92 r
+  mul/adders_8/sumI_25/Ci (FA_206)                        0.00       4.92 r
+  mul/adders_8/sumI_25/U5/ZN (INV_X1)                     0.03       4.95 f
+  mul/adders_8/sumI_25/U7/ZN (OAI22_X1)                   0.04       4.99 r
+  mul/adders_8/sumI_25/Co (FA_206)                        0.00       4.99 r
+  mul/adders_8/sumI_26/Ci (FA_205)                        0.00       4.99 r
+  mul/adders_8/sumI_26/U6/ZN (INV_X1)                     0.03       5.02 f
+  mul/adders_8/sumI_26/U7/ZN (OAI22_X1)                   0.05       5.08 r
+  mul/adders_8/sumI_26/Co (FA_205)                        0.00       5.08 r
+  mul/adders_8/sumI_27/Ci (FA_204)                        0.00       5.08 r
+  mul/adders_8/sumI_27/U6/ZN (INV_X1)                     0.03       5.10 f
+  mul/adders_8/sumI_27/U3/ZN (OAI22_X1)                   0.05       5.16 r
+  mul/adders_8/sumI_27/Co (FA_204)                        0.00       5.16 r
+  mul/adders_8/sumI_28/Ci (FA_203)                        0.00       5.16 r
+  mul/adders_8/sumI_28/U2/Z (BUF_X1)                      0.04       5.20 r
+  mul/adders_8/sumI_28/U1/ZN (XNOR2_X1)                   0.06       5.26 r
+  mul/adders_8/sumI_28/S (FA_203)                         0.00       5.26 r
+  mul/adders_8/S[26] (RCA_NBIT32_7)                       0.00       5.26 r
+  mul/adders_9/A[26] (RCA_NBIT32_6)                       0.00       5.26 r
+  mul/adders_9/sumI_26/A (FA_172)                         0.00       5.26 r
+  mul/adders_9/sumI_26/U1/Z (CLKBUF_X1)                   0.05       5.31 r
+  mul/adders_9/sumI_26/U4/ZN (INV_X1)                     0.02       5.33 f
+  mul/adders_9/sumI_26/U2/ZN (OAI22_X1)                   0.06       5.39 r
+  mul/adders_9/sumI_26/Co (FA_172)                        0.00       5.39 r
+  mul/adders_9/sumI_27/Ci (FA_171)                        0.00       5.39 r
+  mul/adders_9/sumI_27/U7/Z (BUF_X1)                      0.04       5.43 r
+  mul/adders_9/sumI_27/U6/ZN (XNOR2_X1)                   0.06       5.50 r
+  mul/adders_9/sumI_27/S (FA_171)                         0.00       5.50 r
+  mul/adders_9/S[25] (RCA_NBIT32_6)                       0.00       5.50 r
+  mul/adders_10/A[25] (RCA_NBIT32_5)                      0.00       5.50 r
+  mul/adders_10/sumI_25/A (FA_140)                        0.00       5.50 r
+  mul/adders_10/sumI_25/U3/ZN (XNOR2_X1)                  0.07       5.57 r
+  mul/adders_10/sumI_25/U4/ZN (OAI22_X1)                  0.05       5.62 f
+  mul/adders_10/sumI_25/Co (FA_140)                       0.00       5.62 f
+  mul/adders_10/sumI_26/Ci (FA_139)                       0.00       5.62 f
+  mul/adders_10/sumI_26/U7/Z (BUF_X1)                     0.04       5.66 f
+  mul/adders_10/sumI_26/U8/ZN (XNOR2_X1)                  0.06       5.72 f
+  mul/adders_10/sumI_26/S (FA_139)                        0.00       5.72 f
+  mul/adders_10/S[24] (RCA_NBIT32_5)                      0.00       5.72 f
+  mul/adders_11/A[24] (RCA_NBIT32_4)                      0.00       5.72 f
+  mul/adders_11/sumI_24/A (FA_108)                        0.00       5.72 f
+  mul/adders_11/sumI_24/U6/ZN (XNOR2_X1)                  0.07       5.79 f
+  mul/adders_11/sumI_24/U1/ZN (OAI22_X1)                  0.05       5.84 r
+  mul/adders_11/sumI_24/Co (FA_108)                       0.00       5.84 r
+  mul/adders_11/sumI_25/Ci (FA_107)                       0.00       5.84 r
+  mul/adders_11/sumI_25/U5/ZN (INV_X1)                    0.03       5.87 f
+  mul/adders_11/sumI_25/U1/ZN (OAI22_X1)                  0.05       5.93 r
+  mul/adders_11/sumI_25/Co (FA_107)                       0.00       5.93 r
+  mul/adders_11/sumI_26/Ci (FA_106)                       0.00       5.93 r
+  mul/adders_11/sumI_26/U5/ZN (INV_X1)                    0.03       5.95 f
+  mul/adders_11/sumI_26/U1/ZN (OAI22_X1)                  0.05       6.01 r
+  mul/adders_11/sumI_26/Co (FA_106)                       0.00       6.01 r
+  mul/adders_11/sumI_27/Ci (FA_105)                       0.00       6.01 r
+  mul/adders_11/sumI_27/U4/ZN (INV_X1)                    0.03       6.03 f
+  mul/adders_11/sumI_27/U1/ZN (OAI22_X1)                  0.06       6.09 r
+  mul/adders_11/sumI_27/Co (FA_105)                       0.00       6.09 r
+  mul/adders_11/sumI_28/Ci (FA_104)                       0.00       6.09 r
+  mul/adders_11/sumI_28/U5/ZN (INV_X1)                    0.03       6.12 f
+  mul/adders_11/sumI_28/U1/ZN (OAI22_X1)                  0.05       6.17 r
+  mul/adders_11/sumI_28/Co (FA_104)                       0.00       6.17 r
+  mul/adders_11/sumI_29/Ci (FA_103)                       0.00       6.17 r
+  mul/adders_11/sumI_29/U4/ZN (INV_X1)                    0.03       6.20 f
+  mul/adders_11/sumI_29/U1/ZN (OAI22_X1)                  0.05       6.25 r
+  mul/adders_11/sumI_29/Co (FA_103)                       0.00       6.25 r
+  mul/adders_11/sumI_30/Ci (FA_102)                       0.00       6.25 r
+  mul/adders_11/sumI_30/U2/Z (BUF_X1)                     0.04       6.29 r
+  mul/adders_11/sumI_30/U1/ZN (XNOR2_X1)                  0.07       6.36 r
+  mul/adders_11/sumI_30/S (FA_102)                        0.00       6.36 r
+  mul/adders_11/S[28] (RCA_NBIT32_4)                      0.00       6.36 r
+  mul/adders_12/A[28] (RCA_NBIT32_3)                      0.00       6.36 r
+  mul/adders_12/sumI_28/A (FA_71)                         0.00       6.36 r
+  mul/adders_12/sumI_28/U5/ZN (XNOR2_X1)                  0.07       6.43 r
+  mul/adders_12/sumI_28/U2/ZN (OAI22_X1)                  0.04       6.48 f
+  mul/adders_12/sumI_28/Co (FA_71)                        0.00       6.48 f
+  mul/adders_12/sumI_29/Ci (FA_70)                        0.00       6.48 f
+  mul/adders_12/sumI_29/U2/Z (BUF_X1)                     0.04       6.52 f
+  mul/adders_12/sumI_29/U1/ZN (XNOR2_X1)                  0.06       6.58 f
+  mul/adders_12/sumI_29/S (FA_70)                         0.00       6.58 f
+  mul/adders_12/S[27] (RCA_NBIT32_3)                      0.00       6.58 f
+  mul/adders_13/A[27] (RCA_NBIT32_2)                      0.00       6.58 f
+  mul/adders_13/sumI_27/A (FA_39)                         0.00       6.58 f
+  mul/adders_13/sumI_27/U1/ZN (XNOR2_X1)                  0.07       6.65 f
+  mul/adders_13/sumI_27/U3/ZN (OAI22_X1)                  0.06       6.71 r
+  mul/adders_13/sumI_27/Co (FA_39)                        0.00       6.71 r
+  mul/adders_13/sumI_28/Ci (FA_38)                        0.00       6.71 r
+  mul/adders_13/sumI_28/U5/ZN (INV_X1)                    0.03       6.74 f
+  mul/adders_13/sumI_28/U1/ZN (OAI22_X1)                  0.05       6.79 r
+  mul/adders_13/sumI_28/Co (FA_38)                        0.00       6.79 r
+  mul/adders_13/sumI_29/Ci (FA_37)                        0.00       6.79 r
+  mul/adders_13/sumI_29/U4/ZN (INV_X1)                    0.03       6.82 f
+  mul/adders_13/sumI_29/U1/ZN (OAI21_X1)                  0.05       6.87 r
+  mul/adders_13/sumI_29/Co (FA_37)                        0.00       6.87 r
+  mul/adders_13/sumI_30/Ci (FA_36)                        0.00       6.87 r
+  mul/adders_13/sumI_30/U6/ZN (INV_X1)                    0.03       6.89 f
+  mul/adders_13/sumI_30/U2/ZN (OAI22_X1)                  0.06       6.95 r
+  mul/adders_13/sumI_30/Co (FA_36)                        0.00       6.95 r
+  mul/adders_13/sumI_31/Ci (FA_35)                        0.00       6.95 r
+  mul/adders_13/sumI_31/U5/ZN (INV_X1)                    0.03       6.98 f
+  mul/adders_13/sumI_31/U2/ZN (OAI22_X1)                  0.05       7.03 r
+  mul/adders_13/sumI_31/Co (FA_35)                        0.00       7.03 r
+  mul/adders_13/sumTH/Ci (FA_34)                          0.00       7.03 r
+  mul/adders_13/sumTH/U1/ZN (XNOR2_X1)                    0.09       7.12 r
+  mul/adders_13/sumTH/S (FA_34)                           0.00       7.12 r
+  mul/adders_13/S[30] (RCA_NBIT32_2)                      0.00       7.12 r
+  mul/adders_14/A[30] (RCA_NBIT32_1)                      0.00       7.12 r
+  mul/adders_14/sumI_30/A (FA_3)                          0.00       7.12 r
+  mul/adders_14/sumI_30/U4/ZN (NOR2_X1)                   0.03       7.15 f
+  mul/adders_14/sumI_30/U3/ZN (AOI21_X1)                  0.06       7.21 r
+  mul/adders_14/sumI_30/Co (FA_3)                         0.00       7.21 r
+  mul/adders_14/sumI_31/Ci (FA_2)                         0.00       7.21 r
+  mul/adders_14/sumI_31/U7/ZN (INV_X1)                    0.03       7.24 f
+  mul/adders_14/sumI_31/U3/ZN (OAI22_X1)                  0.05       7.29 r
+  mul/adders_14/sumI_31/Co (FA_2)                         0.00       7.29 r
+  mul/adders_14/sumTH/Ci (FA_1)                           0.00       7.29 r
+  mul/adders_14/sumTH/U1/ZN (XNOR2_X1)                    0.07       7.36 r
+  mul/adders_14/sumTH/S (FA_1)                            0.00       7.36 r
+  mul/adders_14/S[30] (RCA_NBIT32_1)                      0.00       7.36 r
+  mul/P[62] (BOOTHMUL_NBIT32)                             0.00       7.36 r
+  regP/D[62] (GEN_REG_N64)                                0.00       7.36 r
+  regP/Q_reg[62]/D (DFFR_X2)                              0.01       7.37 r
+  data arrival time                                                  7.37
+
+  clock CLK (rise edge)                                   5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  regP/Q_reg[62]/CK (DFFR_X2)                             0.00       5.00 r
+  library setup time                                     -0.04       4.96
+  data required time                                                 4.96
+  --------------------------------------------------------------------------
+  data required time                                                 4.96
+  data arrival time                                                 -7.37
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.41
+
+
+1
